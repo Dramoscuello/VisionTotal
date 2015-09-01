@@ -17,38 +17,8 @@
     </head>
     <body>
         <header>
-<!--
-            <div class="container">
-                <div class="row">
--->
-                    <h1 class="tituloHide">visión total</h1>
-<!--                    <div id="logo" class="col-md-2 col-lg-2 col-sm-2">-->
-<!--                        <img src="images/logo/logo%20superior%20izquiedo.png" alt="logo vision total">-->
-<!--                    </div>-->
-<!--                    <div class="col-md-4 col-lg-4 col-sm-4">-->
-<!--                        <h1 class="title">Visiòn Total</h1>-->
-<!--                    </div>-->
-<!--                    <div id="idiomas" class="col-md-2 col-lg-2 col-sm-2">-->
-<!--                        <span><a href="#" >Ingles</a></span>-->
-<!--                        <span><a href="#" class="es">Español</a></span>-->
-<!--                    </div>-->
-<!--                    <div id="busqueda" class="col-md-2 col-lg-2 col-sm-2">-->
-<!--                        <form>-->
-<!--                            <input type="search" placeholder="Buscar...">-->
-<!--                        </form>                        -->
-<!--                    </div>-->
-<!--                    <div class="col-md-2 col-lg-2 col-sm-2 redestop">-->
-<!--                        <ul>-->
-<!--                            <li><a href="https://www.facebook.com/pages/Vision-Total-SAS/925865007451539?__mref=message_bubble"><span class="icon-facebook2"></span></a></li>-->
-<!--                            <li><a href="http://www.instagram.com/vision_total_"><span class="icon-instagram"></span></a></li>-->
-<!--                            <li><a href="http://www.twitter.com/visiontotalsas"><span class="icon-twitter"></span></a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--
-                </div>
-            </div>
--->
-        </header>
+            <h1 class="tituloHide">visión total</h1>
+        </header>        
         <div id="navegacion">
             <div class="container">
                 <div class="row">
@@ -100,7 +70,8 @@
                 </div>
             </div>
         </div>
-        <div id="body">
+        <div>
+            <div id="body">
             <div class="container">
             <div class="row">
                     <div class="col-md-12">
@@ -156,8 +127,9 @@
                         <p>Anim iis laborum te lorem te ullamco dolor eu iudicem fidelissimae.<a href="#">seguir leyendo&rarr;</a></p></div>
                 </div>
             </div>
-        </div>                    
-        
+        </div> 
+
+        </div>
         <footer>
             <div class="container">
                 <div class="row">
@@ -205,7 +177,11 @@
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.mobile.customized.min.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/funciones.js"></script>    
+    <script src="js/funciones.js"></script>  
+<!--
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+-->
     <script>
 		jQuery(function(){
 			
@@ -214,4 +190,20 @@
 			});
 		});
 	</script>
+<!--
+    <script>
+        var vision = angular.module('appRoutesVision',['ngRoute'])
+        vision.config(['$routeProvider', function($routeProvider){
+            $routeProvider.when('/',{
+                templateUrl: 'templates/inicio.html'
+            }).when('/quienes',{
+                templateUrl: 'templates/quienes.html'
+            }).when('/mision',{
+                templateUrl: 'templates/mision.html'
+            }).otherwise({
+                redirectTo: '/',
+            })
+        }])
+    </script>
+-->
 </html>
